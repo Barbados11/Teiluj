@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
+@import url(https://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #eee0e0;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2em;
+    border-bottom: 2px solid #2ecc71;
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #2ecc71;
+    border-bottom: 1px solid #333333;
+    transition: all .4s ease;
+  }
+a:hover {
+    color: #333333;
+    border-bottom: 1px solid #2ecc71;
+}
+
+    .wrapper {
+        position: relative;
+        box-shadow: 0 0 1em #333333;
+    }
+    .wrapper section article {
+        width: 50%;
+        margin: 0 auto;
+        padding: 2em 0;
+}
+       .wrapper section {
+           position: relative;
+           background: #111111;
+       }
+       .wrapper section article p {
+           margin-bottom: 1em;
+       }
+       .wrapper section article p:last-of-type {
+           margin-bottom: 0;
+       }
+       .wrapper section:after {
+           content: "";
+           display: block;
+           position: relative;
+           background-attachment: fixed;
+           background-size: cover;
+           background-position: center center;
+           background-repeat: no-repeat;
+           height: 30em;
+           width: 100%;
+       }
+       .wrapper section:nth-child(1):after { 
+           background-image: url("img.19.jpg");
+       }
+       .wrapper section:nth-child(2):after {
+           background-image: url("IMG_8054.jpg");
+       }
+       .wrapper section:nth-child(3):after {
+          background-image: url("img.18.jpg");
+       }
+       .wrapper section:nth-child(4):after {
+           background-image: url("img.12.jpg");
+       }
+       .wrapper section:nth-child(5):after {
+           background-image: url("img.16.jpg");
+       }
+       
+
+    
+    
