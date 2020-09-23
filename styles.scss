@@ -1,0 +1,213 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
+@import url(https://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+$color-alpha: #eeeeee;
+$color-beta: #2ecc71;
+$color-gamma: #333333;
+
+@mixin cover($i, $url) {
+    &:nth-child(#{$i}) {
+        &:after {
+            background-image: url($url);
+        }
+    }
+}
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: $color-gamma;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2em;
+    border-bottom: 2px solid $color-beta;
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: $color-beta;
+    border-bottom: 1px solid $color-beta;
+  }
+ 
+
+nav {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    left: -30%;
+    background-image: url(IMG/pexels-dark-indigo-2917442.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+a {
+    display: block;
+    width: 100%;
+    padding: 2em;
+    box-sizing: border-box;
+    background: rgba($color-gamma, 0.5);
+    border-bottom: 2px solid $color-beta;
+    text-transform: uppercase;
+    &:hover {
+        border-bottom: 2px solid $color-beta;
+        background: rgba($color-alpha, 0.5);
+    }
+  }
+}
+
+.toggle-nav {
+    font-size: 3em;
+    background: transparent;
+    color: $color-beta;
+    line-height: 1em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    z-index: 100;
+    background: $color-alpha;
+}
+
+.wrapper {
+    position: relative;
+    box-shadow: 0 0 1em $color-gamma;
+    section {
+        position: relative;
+        background: $color-alpha;
+        article {
+            width: 50%;
+            margin: 0 auto;
+            padding: 2em 0;
+            p {
+                margin-bottom: 1em;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+       &:after {
+           content: "";
+           display: block;
+           position: relative;
+           background-attachment: fixed;
+           background-size: cover;
+           background-position: center center;
+           background-repeat: no-repeat;
+           height: 30em;
+           width: 100%;
+       }
+       @include cover(1,"https://unsplash.com/photos/orYix9zFUZo");
+       @include cover(2,"https://www.pexels.com/photo/person-wearing-white-shirt-2440799/");
+       @include cover(3,"https://www.pexels.com/photo/burning-newspaper-3464799/");
+       @include cover(4,"https://www.pexels.com/photo/light-nature-dark-forest-1909572/");
+       @include cover(5,"https://www.pexels.com/photo/a-neon-signage-with-two-person-behind-2917442/");
+       @include cover(6,"https://www.pexels.com/photo/silhouette-of-city-skyline-during-sunset-3887911/");
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        section {
+            article {
+                width: 80%;
+            }
+            &:after {
+                height: 15em;
+            }
+        }
+    }
+}
+    
+
+@import "bourbon";
+
+*{
+  box-sizing: border-box;
+}
+body{
+  background: black;
+}
+
+span{
+  margin: 0;
+  padding: 0;
+}
+
+.end-left{
+  margin-left: -235px;
+}
+
+.end-right{
+  margin-right: -117.5px;
+}
+.outline{
+  position: absolute;
+  top: 20px;
+}
+
+.outline{
+    color: black;
+   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: orange;
+   font-size: 64px;
+  font-family: 'Arvo', serif;
+}
+
+.orbs{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  display: block;
+  font-size: 128px;
+ 
+  
+  span{
+     color: red;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    text-shadow: 0 0 20px orange, 1px 1px 20px orange, 2px 2px 20px orange, -1px -1px 20px orange, -2px -2px 20px orange;
+    position: absolute;
+    left: 50%;
+    
+    &:first-child{
+      margin-left: -210px;
+    }
+    
+    &:not(:first-child){
+      margin-left: -35px;
+    }
+  }
+}
+
+.glow{
+  opacity: 0;
+  font-family: 'Arvo', serif;
+  font-weight: 300;
+  color: orange;
+  margin-left: -222.5px;
+  font-size: 105px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+}
